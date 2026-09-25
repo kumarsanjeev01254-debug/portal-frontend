@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { APPLICATION_API_ENDPOINT } from "@/utils/data";
-import { setAppliedJobs } from "@/redux/jobSlice";
+import { APPLICATION_API_ENDPOINT } from "@/utilis/data";
+import { setAllAppliedJobs } from "@/redux/JobSlice";
 
 const UseGetAppliedJobs = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const UseGetAppliedJobs = () => {
         console.log("APPLIED JOBS RESPONSE:", response.data);
 
         dispatch(
-          setAppliedJobs(response.data.applications || [])
+          setAllAppliedJobs(response.data.applications || [])
         );
       } catch (error) {
         console.error(
