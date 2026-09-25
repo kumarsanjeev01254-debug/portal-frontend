@@ -51,7 +51,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import authReducer from "./authslice";
 import companyReducer from "./CompanySlice";
-import jobReducer from "./JobSlice";
+import jobReducer from "./JobSlice.jsx";
 
 const rootReducer = combineReducers({
   auth: authReducer,
