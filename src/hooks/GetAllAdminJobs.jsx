@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 
 import { JOB_API_ENDPOINT } from "@/utilis/data";
-import { setAllAdminJobs } from "@/redux/Jobslice";
+import { setAllAdminJobs } from "@/redux/JobSlice";
 
 const GetAllAdminJobs = (enabled = true) => {
   const dispatch = useDispatch();
